@@ -34,6 +34,18 @@ function onPlayerReady(event) {
   player.setVolume(30);
   // YouTube müziği otomatik başlat
   player.playVideo();
+  
+  // Kullanıcı etkileşimi sonrası sesi aç
+  document.addEventListener('click', function() {
+    player.unMute();
+    console.log('Ses açıldı!');
+  }, { once: true });
+  
+  // Veya sayfa yüklendiğinde otomatik ses açma denemesi
+  setTimeout(() => {
+    player.unMute();
+    console.log('Otomatik ses açma denendi');
+  }, 2000);
 }
 
 function onPlayerStateChange(event) {

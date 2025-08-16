@@ -6,42 +6,12 @@ onload = () =>{
 let isMusicPlaying = false;
 
 function toggleMusic() {
-  const music = document.getElementById('background-music');
-  const button = document.querySelector('.music-toggle');
-  
-  if (isMusicPlaying) {
-    music.pause();
-    button.classList.remove('playing');
-    button.querySelector('.music-text').textContent = 'Müzik';
-    isMusicPlaying = false;
-  } else {
-    music.play().then(() => {
-      button.classList.add('playing');
-      button.querySelector('.music-text').textContent = 'Durdur';
-      isMusicPlaying = true;
-    }).catch(error => {
-      console.log('Müzik çalınamadı:', error);
-      alert('Müzik çalınamadı. Tarayıcı ayarlarınızı kontrol edin.');
-    });
-  }
+  console.log('Normal müzik fonksiyonu kaldırıldı - sadece YouTube müziği kullanılıyor');
 }
 
-// Sayfa yüklendiğinde müzikleri otomatik başlat
+// Sayfa yüklendiğinde YouTube müziği hazırla
 document.addEventListener('DOMContentLoaded', function() {
-  const music = document.getElementById('background-music');
-  
-  // Normal müziği otomatik başlat
-  music.addEventListener('canplaythrough', function() {
-    console.log('Müzik hazır! Otomatik başlatılıyor...');
-    music.play().catch(error => {
-      console.log('Otomatik müzik çalınamadı:', error);
-    });
-  });
-  
-  // Müzik hatası durumunda
-  music.addEventListener('error', function() {
-    console.log('Müzik yüklenemedi');
-  });
+  console.log('Sayfa yüklendi! YouTube müziği hazırlanıyor...');
 });
 
 // YouTube Müzik kontrol fonksiyonu

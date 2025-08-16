@@ -165,10 +165,10 @@ body {
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
   background-color: #ffffff;
-  background-image: linear-gradient(to top, #f8f9fa, #ffffff);
+  background-image: linear-gradient(to top, #f8f8f8, #ffffff);
   transform-origin: bottom center;
-  opacity: 0.9;
-  box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
+  opacity: 0.95;
+  box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.8), 0 0 3vmin rgba(255, 255, 255, 0.3);
 }
 .flower__leaf--1 {
   transform: translate(-10%, 1%) rotateY(40deg) rotateX(-50deg);
@@ -185,9 +185,9 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #f8f9fa, #ffffff);
+  background-image: linear-gradient(to top, #f8f8f8, #ffffff);
   z-index: 1;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .flower__white-circle {
   position: absolute;
@@ -196,7 +196,8 @@ body {
   width: 9vmin;
   height: 4vmin;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #ffffff;
+  box-shadow: 0 0 4vmin rgba(255, 255, 255, 0.8), inset 0 0 2vmin rgba(255, 255, 255, 0.9);
 }
 .flower__white-circle::after {
   content: "";
@@ -1316,13 +1317,13 @@ body {
 .flower__light {
   position: absolute;
   bottom: 0vmin;
-  width: 2.5vmin;
-  height: 2.5vmin;
-  background: linear-gradient(45deg, rgba(255, 20, 147, 0.9), rgba(255, 105, 180, 0.9));
+  width: 2vmin;
+  height: 2vmin;
+  background: linear-gradient(45deg, rgba(255, 107, 107, 0.8), rgba(255, 142, 142, 0.8));
   transform: rotate(-45deg);
-  filter: blur(0.05vmin);
+  filter: blur(0.1vmin);
   animation: light-ans 4s linear infinite backwards, heart-glow 2s ease-in-out infinite;
-  box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 25px rgba(255, 105, 180, 0.6);
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.6);
   animation-delay: var(--delay, 0s);
 }
 
@@ -1330,9 +1331,9 @@ body {
 .flower__light::after {
   content: '';
   position: absolute;
-  width: 2.5vmin;
-  height: 2.5vmin;
-  background: linear-gradient(45deg, rgba(255, 20, 147, 0.9), rgba(255, 105, 180, 0.9));
+  width: 2vmin;
+  height: 2vmin;
+  background: linear-gradient(45deg, rgba(255, 107, 107, 0.8), rgba(255, 142, 142, 0.8));
   border-radius: 50%;
 }
 
@@ -1347,35 +1348,23 @@ body {
 }
 
 .flower__light:nth-child(odd) {
-  background: linear-gradient(45deg, rgba(255, 0, 127, 0.9), rgba(255, 20, 147, 0.9));
-  box-shadow: 0 0 15px rgba(255, 0, 127, 0.8), 0 0 25px rgba(255, 20, 147, 0.6);
+  background: linear-gradient(45deg, rgba(247, 107, 175, 0.8), rgba(255, 142, 200, 0.8));
+  box-shadow: 0 0 10px rgba(247, 107, 175, 0.6);
 }
 
 .flower__light:nth-child(odd)::before,
 .flower__light:nth-child(odd)::after {
-  background: linear-gradient(45deg, rgba(255, 0, 127, 0.9), rgba(255, 20, 147, 0.9));
+  background: linear-gradient(45deg, rgba(247, 107, 175, 0.8), rgba(255, 142, 200, 0.8));
 }
 
 @keyframes heart-glow {
   0%, 100% {
-    opacity: 0.9;
-    filter: blur(0.05vmin) brightness(1) scale(1);
-    transform: rotate(-45deg) scale(1);
-  }
-  25% {
-    opacity: 1;
-    filter: blur(0.05vmin) brightness(1.2) scale(1.1);
-    transform: rotate(-45deg) scale(1.1);
+    opacity: 0.8;
+    filter: blur(0.1vmin) brightness(1);
   }
   50% {
     opacity: 1;
-    filter: blur(0.05vmin) brightness(1.4) scale(1.05);
-    transform: rotate(-45deg) scale(1.05);
-  }
-  75% {
-    opacity: 0.95;
-    filter: blur(0.05vmin) brightness(1.1) scale(1.08);
-    transform: rotate(-45deg) scale(1.08);
+    filter: blur(0.1vmin) brightness(1.3);
   }
 }
 

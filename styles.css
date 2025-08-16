@@ -171,20 +171,20 @@ body {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), inset 0 0 2vmin rgba(255, 255, 255, 0.3);
 }
 .flower__leaf--1 {
-  transform: translate(-10%, 1%) rotateY(40deg) rotateX(-50deg);
+  transform: translate(-10%, 5%) rotateY(40deg) rotateX(-50deg);
 }
 .flower__leaf--2 {
-  transform: translate(-50%, -4%) rotateX(40deg);
+  transform: translate(-50%, 0%) rotateX(40deg);
 }
 .flower__leaf--3 {
-  transform: translate(-90%, 0%) rotateY(45deg) rotateX(50deg);
+  transform: translate(-90%, 4%) rotateY(45deg) rotateX(50deg);
 }
 .flower__leaf--4 {
   width: 6vmin;
   height: 6vmin;
   transform-origin: bottom left;
   border-radius: 50%;
-  transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
+  transform: translate(0%, 22%) rotateX(70deg) rotate(-43deg);
   background-image: linear-gradient(to top, #f8f9fa, #ffffff);
   z-index: 1;
   opacity: 0.9;

@@ -1120,23 +1120,23 @@ body {
 @-webkit-keyframes light-ans {
   0% {
     opacity: 0;
-    transform: rotate(-45deg) translateY(0vmin);
+    transform: translateY(0vmin);
   }
   25% {
     opacity: 1;
-    transform: rotate(-45deg) translateY(-5vmin) translateX(-2vmin);
+    transform: translateY(-5vmin) translateX(-2vmin);
   }
   50% {
     opacity: 1;
-    transform: rotate(-45deg) translateY(-15vmin) translateX(2vmin);
+    transform: translateY(-15vmin) translateX(2vmin);
     filter: blur(0.2vmin);
   }
   75% {
-    transform: rotate(-45deg) translateY(-20vmin) translateX(-2vmin);
+    transform: translateY(-20vmin) translateX(-2vmin);
     filter: blur(0.2vmin);
   }
   100% {
-    transform: rotate(-45deg) translateY(-30vmin);
+    transform: translateY(-30vmin);
     opacity: 0;
     filter: blur(1vmin);
   }
@@ -1144,23 +1144,23 @@ body {
 @keyframes light-ans {
   0% {
     opacity: 0;
-    transform: rotate(-45deg) translateY(0vmin);
+    transform: translateY(0vmin);
   }
   25% {
     opacity: 1;
-    transform: rotate(-45deg) translateY(-5vmin) translateX(-2vmin);
+    transform: translateY(-5vmin) translateX(-2vmin);
   }
   50% {
     opacity: 1;
-    transform: rotate(-45deg) translateY(-15vmin) translateX(2vmin);
+    transform: translateY(-15vmin) translateX(2vmin);
     filter: blur(0.2vmin);
   }
   75% {
-    transform: rotate(-45deg) translateY(-20vmin) translateX(-2vmin);
+    transform: translateY(-20vmin) translateX(-2vmin);
     filter: blur(0.2vmin);
   }
   100% {
-    transform: rotate(-45deg) translateY(-30vmin);
+    transform: translateY(-30vmin);
     opacity: 0;
     filter: blur(1vmin);
   }
@@ -1324,12 +1324,36 @@ body {
   animation: light-ans 4s linear infinite backwards, heart-glow 2s ease-in-out infinite;
   box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 25px rgba(255, 105, 180, 0.6);
   animation-delay: var(--delay, 0s);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.flower__light::before,
+.flower__light::after {
+  content: '';
+  position: absolute;
+  width: 2.5vmin;
+  height: 2.5vmin;
+  background: linear-gradient(45deg, rgba(255, 20, 147, 0.9), rgba(255, 105, 180, 0.9));
+  border-radius: 50%;
+}
+
+.flower__light::before {
+  top: -1vmin;
+  left: 0;
+}
+
+.flower__light::after {
+  top: 0;
+  left: 1vmin;
 }
 
 .flower__light:nth-child(odd) {
   background: linear-gradient(45deg, rgba(255, 0, 127, 0.9), rgba(255, 20, 147, 0.9));
   box-shadow: 0 0 15px rgba(255, 0, 127, 0.8), 0 0 25px rgba(255, 20, 147, 0.6);
+}
+
+.flower__light:nth-child(odd)::before,
+.flower__light:nth-child(odd)::after {
+  background: linear-gradient(45deg, rgba(255, 0, 127, 0.9), rgba(255, 20, 147, 0.9));
 }
 
 @keyframes heart-glow {

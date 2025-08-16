@@ -1316,44 +1316,20 @@ body {
 .flower__light {
   position: absolute;
   bottom: 0vmin;
-  width: 3vmin;
-  height: 3vmin;
+  width: 2.5vmin;
+  height: 2.5vmin;
   background: linear-gradient(45deg, rgba(255, 20, 147, 0.9), rgba(255, 105, 180, 0.9));
   transform: rotate(-45deg);
   filter: blur(0.05vmin);
   animation: light-ans 4s linear infinite backwards, heart-glow 2s ease-in-out infinite;
   box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 25px rgba(255, 105, 180, 0.6);
   animation-delay: var(--delay, 0s);
-}
-
-.flower__light::before,
-.flower__light::after {
-  content: '';
-  position: absolute;
-  width: 3vmin;
-  height: 3vmin;
-  background: linear-gradient(45deg, rgba(255, 20, 147, 0.9), rgba(255, 105, 180, 0.9));
-  border-radius: 50%;
-}
-
-.flower__light::before {
-  top: -1vmin;
-  left: 0;
-}
-
-.flower__light::after {
-  top: 0;
-  left: 1vmin;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .flower__light:nth-child(odd) {
   background: linear-gradient(45deg, rgba(255, 0, 127, 0.9), rgba(255, 20, 147, 0.9));
   box-shadow: 0 0 15px rgba(255, 0, 127, 0.8), 0 0 25px rgba(255, 20, 147, 0.6);
-}
-
-.flower__light:nth-child(odd)::before,
-.flower__light:nth-child(odd)::after {
-  background: linear-gradient(45deg, rgba(255, 0, 127, 0.9), rgba(255, 20, 147, 0.9));
 }
 
 @keyframes heart-glow {
